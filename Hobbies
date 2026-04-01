@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+     <style>
+        body{
+            background-color: seagreen;
+        }
+     </style>
+</head>
+<body>
+    <h1 class="container">My Hobbies!</h1>
+    <footer>(T's and C's apply)</footer>
+    <p>The digital tug-of-war between social media apps and gaming often traps us in a loop of curated perfection and dopamine-heavy achievements, creating a paradox where we are more "connected" than ever yet increasingly isolated from the physical world. While these platforms offer community and entertainment, they frequently contradict our biological need for genuine movement and sensory variety, replacing the warmth of the sun and the rhythm of a stride with the blue light of a static screen. Transitioning from the virtual lobby to the great outdoors isn't just about "unplugging"; it’s about reclaiming your perspective. Swapping a digital controller for a hike or a notification for a real-world conversation grounds us in the present moment, lowering cortisol levels and reminding us that no high-definition display can replicate the refreshing complexity of fresh air and a wide-open horizon!
+        
+    </p>
+    <div class="container">
+  <h1>My Project Title</h1>
+  <p>This content will stay centered and won't touch the edges of the screen.</p>
+</div>
+<div class="container-fluid">
+  <h2>Full-Width Section</h2>
+  <p>This content will stretch from the left edge to the right edge.</p>
+</div>
+</body>
+</html>
