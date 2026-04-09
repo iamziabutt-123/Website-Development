@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid Activity</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Adding some custom CSS just to make the grid visible */
+        .grid-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Bootstrap Grid Practice</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="grid-box">Left Side (col-md-6)</div>
+            </div>
+            <div class="col-md-6">
+                <div class="grid-box">Right Side (col-md-6)</div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="grid-box">Column A</div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-box">Column B</div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-box">Column C</div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-8">
+                <div class="grid-box">Main Content Area (col-md-8)</div>
+            </div>
+            <div class="col-md-4">
+                <div class="grid-box">Sidebar (col-md-4)</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
