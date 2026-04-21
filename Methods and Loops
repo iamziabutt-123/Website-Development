@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Interactive Activity</h1>
+    <p id="target-text">This is the original text.</p>
+
+    <button type="button" onclick="updateContent()">Change Text</button>
+
+    <script>
+        function updateContent() {
+            // 3. Using document.getElementById to select the element
+            document.getElementById("target-text").innerHTML = "The text has been updated!";
+        }
+    </script>
+
+</body>
+</html>
