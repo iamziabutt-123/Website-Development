@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1 id="myHeading">Original Text</h1>
+    <button onclick="updateText()">Click Me to Change Text</button>
+
+    <script>
+        function updateText() {
+            // Selecting the element by its ID and changing its content
+            document.getElementById("myHeading").innerHTML = "Text successfully updated via JS!";
+        }
+    </script>
+
+</body>
+</html>
