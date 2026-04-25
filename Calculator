@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; padding-top: 50px; }
+        .calculator { border: 1px solid #ccc; padding: 20px; border-radius: 10px; width: 250px; }
+        #display { width: 100%; height: 40px; margin-bottom: 10px; font-size: 20px; text-align: right; }
+        button { width: 50px; height: 50px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" disabled>
+    
+    <div>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('/')">/</button>
+    </div>
+    <div>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('*')">*</button>
+    </div>
+    <div>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('-')">-</button>
+    </div>
+    <div>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="appendToDisplay('+')">+</button>
+    </div>
+</div>
+
+<script>
+    // This is the function we use to get the display element
+    function getDisplay() {
+        return document.getElementById("display");
+    }
+
+    // Adds numbers/operators to the display
+    function appendToDisplay(value) {
+        getDisplay().value += value;
+    }
+
+    // Clears the display
+    function clearDisplay() {
+        getDisplay().value = "";
+    }
+
+    // Calculates the result
+    function calculate() {
+        try {
+            // eval() evaluates the string as a mathematical expression
+            getDisplay().value = eval(getDisplay().value);
+        } catch (e) {
+            getDisplay().value = "Error";
+        }
+    }
+</script>
+
+</body>
+</html>
