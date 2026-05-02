@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinu's Information</title>
+</head>
+<body>
+
+    <h2>Tinu's Profile & Favorites</h2>
+    
+    <div id="object-info"></div>
+    <hr>
+    <div id="array-info"></div>
+    <hr>
+    <div id="method-info"></div>
+
+    <script>
+        // 1. Creating an Object to store Tinu's info
+        const tinuInfo = {
+            firstName: "Tinu",
+            age: 12,
+            school: "Bright Future Academy",
+            hobby: "Coding"
+        };
+
+        // 2. Creating an Array to store favorite colors
+        let favColors = ["Blue", "Lavender", "Mint Green", "Coral"];
+
+        // Selecting the display elements
+        const objDisplay = document.getElementById("object-info");
+        const arrDisplay = document.getElementById("array-info");
+        const methodDisplay = document.getElementById("method-info");
+
+        // --- ACCESSING OBJECT KEYS AND VALUES ---
+        let objContent = "<h3>Object Data (Key: Value)</h3>";
+        for (let key in tinuInfo) {
+            objContent += `<b>${key}:</b> ${tinuInfo[key]} <br>`;
+        }
+        objDisplay.innerHTML = objContent;
+
+        // --- ACCESSING ARRAY BY INDEX ---
+        let arrContent = "<h3>Array Data (Index: Value)</h3>";
+        favColors.forEach((color, index) => {
+            arrContent += `Index ${index}: ${color} <br>`;
+        });
+        arrDisplay.innerHTML = arrContent;
+
+        // --- PERFORMING ARRAY METHODS ---
+        // Let's add a new color and sort the list
+        favColors.push("Goldenrod"); // Adding to the end
+        let sortedColors = [...favColors].sort(); // Sorting alphabetically
+
+        methodDisplay.innerHTML = `
+            <h3>Array Methods Applied</h3>
+            <b>Added "Goldenrod" (Push):</b> ${favColors.join(", ")} <br>
+            <b>Alphabetical Order (Sort):</b> ${sortedColors.join(", ")} <br>
+            <b>Total Colors (Length):</b> ${favColors.length}
+        `;
+    </script>
+
+</body>
+</html>
