@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Random Number Generator</h2>
+    <p id="output"></p>
+
+    <script>
+        // 1. We declare 'i' but leave it undefined initially
+        let i; 
+
+        // 2. We assign a starting value
+        i = 0; 
+
+        // 3. Using a while loop to print 5 random numbers
+        while (i < 5) {
+            
+            // Block Scope: 'randomNumber' only exists inside this loop
+            let randomNumber = Math.floor(Math.random() * 100) + 1;
+            
+            // Selecting the HTML element and appending the result
+            document.getElementById("output").innerHTML += "Number " + (i + 1) + ": " + randomNumber + "<br>";
+            
+            i++;
+        }
+    </script>
+
+</body>
+</html>
