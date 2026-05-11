@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Class Inheritance Activity</title>
+</head>
+<body>
+
+    <h2>JavaScript Class Methods & Inheritance</h2>
+    
+    <!-- Elements to display our results -->
+    <p id="parentOutput"></p>
+    <p id="childOutput"></p>
+    <p id="staticOutput"></p>
+
+    <script>
+        // 1. Create the Parent Class
+        class Device {
+            constructor(brand) {
+                this.deviceName = brand;
+            }
+
+            // Non-static method (Instance method)
+            present() {
+                return "I have a " + this.deviceName;
+            }
+
+            // Static method (Belongs to the class, not the object)
+            static hello() {
+                return "Hello! I am a static method from the Device class.";
+            }
+        }
+
+        // 2. Inherit the class (Child Class)
+        class Model extends Device {
+            constructor(brand, mod) {
+                super(brand); // Calls the parent constructor
+                this.modelName = mod;
+            }
+
+            show() {
+                // Accessing the parent's non-static method using this.present()
+                return this.present() + ", it is a " + this.modelName;
+            }
+        }
+
+        // 3. Accessing the methods
+        
+        // Create an instance of the child class
+        let myPhone = new Model("Apple", "iPhone 15");
+
+        // Accessing non-static methods via the object
+        document.getElementById("parentOutput").innerHTML = myPhone.present();
+        document.getElementById("childOutput").innerHTML = myPhone.show();
+
+        // Accessing the static method via the Class name (not the object)
+        document.getElementById("staticOutput").innerHTML = Device.hello();
+
+    </script>
+</body>
+</html>
