@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h3>Math Results</h3>
+    <p id="result"></p>
+
+    <script>
+        // Simple function to sum two numbers
+        function addNumbers(a, b) {
+            return a + b;
+        }
+
+        // Function to calculate and display everything
+        function displayMath() {
+            // Calculating the sum
+            let sum = addNumbers(50, 25);
+
+            // Trigonometry: Converting degrees to radians
+            // Formula: degrees * (Math.PI / 180)
+            let sinValue = Math.sin(30 * (Math.PI / 180)); 
+            let cosValue = Math.cos(0 * (Math.PI / 180));
+
+            // Printing everything to the 'result' paragraph
+            document.getElementById("result").innerHTML = 
+                "Sum: " + sum + "<br>" +
+                "Sin(30°): " + sinValue.toFixed(2) + "<br>" +
+                "Cos(0°): " + cosValue.toFixed(2);
+        }
+
+        // Run the function
+        displayMath();
+    </script>
+
+</body>
+</html>
