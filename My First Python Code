@@ -1,0 +1,5 @@
+print("My first day of learning python.")
+
+a=input("Write your name:")
+
+print(a)
